@@ -106,36 +106,44 @@ html {
 
 /* ── Viewport Animations ── */
 
+/*
+ * Animation system
+ *
+ * Elements start hidden (opacity:0). When they enter the viewport the
+ * .in-view + animation class is added.  We use `fill-mode: both` so the
+ * "from" keyframe applies during any animation-delay, preventing the
+ * flash where .in-view's opacity:1 would briefly show the element
+ * before the keyframe starts.
+ */
+
 .animate-on-scroll {
   opacity: 0;
 }
 
-.animate-on-scroll.in-view {
-  opacity: 1;
-}
+/* No .in-view override needed — the animation fill-mode handles final state */
 
 .fade-in {
-  animation: fade-in var(--duration-slow) var(--ease-out-expo) forwards;
+  animation: fade-in var(--duration-slow) var(--ease-out-expo) both;
 }
 
 .fade-in-up {
-  animation: fade-in-up var(--duration-slow) var(--ease-out-expo) forwards;
+  animation: fade-in-up var(--duration-slow) var(--ease-out-expo) both;
 }
 
 .fade-in-down {
-  animation: fade-in-down var(--duration-slow) var(--ease-out-expo) forwards;
+  animation: fade-in-down var(--duration-slow) var(--ease-out-expo) both;
 }
 
 .slide-in-left {
-  animation: slide-in-left var(--duration-slower) var(--ease-out-expo) forwards;
+  animation: slide-in-left var(--duration-slower) var(--ease-out-expo) both;
 }
 
 .slide-in-right {
-  animation: slide-in-right var(--duration-slower) var(--ease-out-expo) forwards;
+  animation: slide-in-right var(--duration-slower) var(--ease-out-expo) both;
 }
 
 .scale-in {
-  animation: scale-in var(--duration-slow) var(--ease-out-expo) forwards;
+  animation: scale-in var(--duration-slow) var(--ease-out-expo) both;
 }
 
 /* ── Stagger delays ── */
@@ -146,6 +154,25 @@ html {
 .stagger-4 { animation-delay: 300ms; }
 .stagger-5 { animation-delay: 400ms; }
 .stagger-6 { animation-delay: 500ms; }
+
+/* ── Reduced motion: skip animations, show content immediately ── */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+  }
+
+  .fade-in,
+  .fade-in-up,
+  .fade-in-down,
+  .slide-in-left,
+  .slide-in-right,
+  .scale-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* ── Keyframes ── */
 
