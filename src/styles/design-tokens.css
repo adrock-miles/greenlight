@@ -1,0 +1,76 @@
+/*
+ * Design Tokens
+ * =============
+ * This is the ONE file a designer edits to change the site's look.
+ * All values use HSL format: "H S% L%" (no commas, no hsl() wrapper).
+ *
+ * These primitives are mapped to component variables in globals.css.
+ */
+
+:root {
+  /* ── Brand Colors ── */
+  --brand-50: 152 76% 96%;
+  --brand-100: 152 72% 90%;
+  --brand-200: 153 68% 79%;
+  --brand-300: 154 64% 66%;
+  --brand-400: 155 55% 52%;
+  --brand-500: 156 60% 41%;
+  --brand-600: 157 65% 33%;
+  --brand-700: 158 68% 26%;
+  --brand-800: 159 70% 20%;
+  --brand-900: 160 72% 14%;
+  --brand-950: 161 75% 8%;
+
+  /* ── Neutral Palette ── */
+  --neutral-0: 0 0% 100%;
+  --neutral-50: 210 20% 98%;
+  --neutral-100: 220 14% 96%;
+  --neutral-200: 220 13% 91%;
+  --neutral-300: 216 12% 84%;
+  --neutral-400: 218 11% 65%;
+  --neutral-500: 220 9% 46%;
+  --neutral-600: 215 14% 34%;
+  --neutral-700: 217 19% 27%;
+  --neutral-800: 215 28% 17%;
+  --neutral-900: 221 39% 11%;
+  --neutral-950: 224 50% 6%;
+
+  /* ── Typography ── */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* ── Spacing Scale ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Border Radii ── */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+}
