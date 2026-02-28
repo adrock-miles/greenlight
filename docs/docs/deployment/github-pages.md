@@ -10,17 +10,15 @@ This documentation site (Docusaurus) is configured to publish to **GitHub Pages*
 ## How it works
 
 1. A GitHub Actions workflow at `.github/workflows/deploy-docs.yml` triggers on pushes to `main`
-2. It installs dependencies, builds the Docusaurus site, and pushes the output to the `gh-pages` branch
-3. GitHub Pages serves the site from that branch
+2. It installs dependencies, builds the Docusaurus site, and uploads it as a GitHub Pages artifact
+3. GitHub Pages deploys the artifact automatically — no extra branch needed
 
 ## First-time setup
 
 ### 1. Enable GitHub Pages in your repo settings
 
 1. Go to your repo on GitHub → **Settings** → **Pages**
-2. Under **Build and deployment → Source**, select **Deploy from a branch**
-3. Set the branch to `gh-pages` and folder to `/ (root)`
-4. Click **Save**
+2. Under **Build and deployment → Source**, select **GitHub Actions**
 
 ### 2. Push to main
 
