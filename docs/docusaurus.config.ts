@@ -7,24 +7,15 @@ const config: Config = {
   tagline: 'A modern portfolio you can make your own in minutes',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
   url: 'https://adrock-miles.github.io',
   baseUrl: '/greenlight/',
 
   organizationName: 'adrock-miles',
   projectName: 'greenlight',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
-
-  markdown: {
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
-  },
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
