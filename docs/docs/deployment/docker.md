@@ -88,24 +88,26 @@ CMD ["node", "server.js"]
 | `docker run -d -p 3000:3000 greenlight` | Start in the background (detached) |
 | `docker ps` | List running containers |
 | `docker stop <container-id>` | Stop a container |
-| `docker compose up` | Build + run (if you add a `compose.yaml`) |
+| `docker compose up` | Build + run with compose |
 
-## Optional: add a compose file
+## Using Docker Compose
 
-For convenience you can create a `compose.yaml` in the project root:
-
-```yaml
-services:
-  web:
-    build: .
-    ports:
-      - "3000:3000"
-```
-
-Then just run:
+A `compose.yaml` is included in the project root. To build and run:
 
 ```bash
 docker compose up
+```
+
+To run in the background:
+
+```bash
+docker compose up -d
+```
+
+To stop:
+
+```bash
+docker compose down
 ```
 
 ## Troubleshooting
